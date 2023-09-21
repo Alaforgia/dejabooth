@@ -2,7 +2,7 @@
   <h1>Welcome to <span class="text-gradient">DejaBooth</span></h1>
   <header class="hero">
     <p class="instructions">
-      <div class="capture">Capture Your Memories</div>
+      <span class="capture">Capture Your Memories</span><br/>
       DejaBooth is a portable, app based photobooth <br/> Great for your wedding, 
       event, or party! </p>
       <img src="https://static.wixstatic.com/media/bf05cd_711b0556e0184ca0aebc8dd1590c3729~mv2.jpg" loading="eager"
@@ -39,10 +39,10 @@ font-size: x-large;
 		
 	}
 	.hero img {
-		aspect-ratio: 9 / 11;
-		object-fit:fill;
-    height: fit-content;
-    width: fit-content;
+		/* aspect-ratio: 9 / 11; */
+		object-fit: cover;
+    height: auto;
+    width: 90%;
 		object-position: center;
     position: relative;
     bottom: 10px;
@@ -87,7 +87,7 @@ font-size: x-large;
 	}
 
   .capture{
-  
+  font-size: 65px;
   }
 
 	.link-card-grid {
