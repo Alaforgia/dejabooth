@@ -5,7 +5,8 @@
 <main>
   <!-- <h1>Welcome to <span class="text-gradient">DejaBooth</span></h1> -->
       <!-- <img src="public/img/photobooth1_upscaled.png" class="bg-img"/> -->
-      <img src="public/img/booth_close_cutout1.png" class="bg-img" /> 
+      <img src="public/img/booth_close2.png" class="booth-1" /> 
+      <img src="public/img/bg1.png" class="bg-img" /> 
       <!-- <img src="public/img/photobooth_scaled1.png" loading="eager"
       decoding="async" class="bg-img"/> -->
       <!-- <img src="public/img/photobooth_bg.png" class="bg-img" /> -->
@@ -37,12 +38,13 @@
 position: absolute;
 max-width: 100%;
 height: 100vh;
-/* object-position: center; */
-/* top: calc(50% + 0px); */
+object-position: center;
+top: calc(50% + 0px);
 /* bottom: calc(50% - 1000px); */
-/* left: calc(50% + 0px); */
-/* transform: translate(-50%, -50%); */
-object-fit: contain;
+left: calc(50% + 8px);
+transform: translate(-50%, -50%);
+object-fit: cover;
+z-index: 2;
 	}
 
 	.text{
@@ -63,10 +65,10 @@ text-transform: uppercase;
 	.booth-1{
 		position: absolute;
 		z-index: 13;
-	  top: calc(0% - 330px);
+	  top: calc(50% - 340px);
 		left: calc(19% + 16px);
 		/* bottom: calc(20% - 20px); */
-		width: 1500px;
+		width: 500px;
 
 	}
 
