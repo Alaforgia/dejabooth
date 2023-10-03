@@ -31,11 +31,15 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
+		/* scroll-behavior: calc(2222, 41230); */
 	}
 	html {
 		/* font-family: system-ui, sans-serif; */
 		background: #13151a;
 		/* background-size: 224px; */
+		scroll-snap-type: y mandatory;
 	}
 	code {
 		font-family:
