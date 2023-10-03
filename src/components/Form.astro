@@ -1,18 +1,78 @@
 <main>
 <h2>Inquiry Form</h2>
+<form>
+  <label>
+    <input type="text" name="event" placeholder="Event Type" required/>
+  </label>
+  <label>
+    <!-- Must link to my email -->
+    <input type="text" name="email" placeholder="Email" required/>
+  </label>
+  <label>
+    <textarea name="body" placeholder="Compose Message Here!" required></textarea>
+  </label>
+  <button>Submit</button>
+</form>
 </main>
 
 <style>
 main{
   height: 100vh;
-  display: flex;
-    align-items: center;
-    justify-content: center;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
 }
 
 h2{
-  color: white
+  display: flex;
+    align-items: center;
+    justify-content: center;
+  color: white;
+  margin-bottom: 15%;
+  padding: 3%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  
+}
+label{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  /* justify-content: center; */
+  padding-bottom: 2%;
+  gap: 3%;
+  
+}
+input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3%;
+  border-radius: 5%;
+  
+}
+
+textarea{
+  width: 30rem;
+  height: 150px;
+  padding: 4px 4px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+button{
+  color:aqua;
+  background-color: brown;
+  padding: 1.5em;
+  border: 2px solid #ccc;
+  border-radius: 35%;
 }
 </style>
