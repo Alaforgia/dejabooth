@@ -1,12 +1,31 @@
+<script>
+const menuItems = document.querySelectorAll('.dd-menu li');
+const eventTypeButton = document.getElementById('event-type-button');
+
+menuItems.forEach((menuItem) => {
+  menuItem.addEventListener('click', () => {
+    eventTypeButton.textContent = menuItem.textContent;
+    });
+  });
+</script>
+
+
 <main>
 <h2>Inquiry Form</h2>
 <form>
-  <label>
-    <input type="text" name="event" placeholder="Event Type" required/>
+  <label class="dropdown">
+    <div class="dd-button" id="event-type-button">Event Type</div>
+    <input type="checkbox" class="dd-input" value="Event Type" placeholder="Event Type" required/>
+    <ul class="dd-menu">
+      <li>Wedding</li>
+      <li>Work Event</li>
+      <li>Networking Event</li>
+      <li>Other</li>
+    </ul>
   </label>
   <label>
     <!-- Must link to my email -->
-    <input type="text" name="email" placeholder="Email" required/>
+    <input type="text" name="email" class="email" placeholder="Email" required/>
   </label>
   <label>
     <textarea name="body" placeholder="Compose Message Here!" required></textarea>
@@ -14,6 +33,8 @@
   <button>Submit</button>
 </form>
 </main>
+
+
 
 <style>
 main{
@@ -40,6 +61,84 @@ form{
   margin-left: 5em;
   
 }
+
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+.dd-button {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 10px 20px 10px 10px;
+  background-color: #8b3535;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 9rem;
+}
+
+.dd-button:after {
+  content: '';
+  position: absolute;
+  top: 26%;
+  right: 25px;
+  transform: translateY(0%); 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid black;
+}
+
+.dd-button:hover {
+  background-color: #eeeeee;
+}
+
+.dd-input {
+  display: none;
+}
+
+.dd-menu {
+  position: absolute;
+  top: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+  background-color: #d05050;
+  list-style-type: none;
+}
+
+.dd-input + .dd-menu {
+  display: none;
+} 
+
+.dd-input:checked + .dd-menu {
+  display: block;
+} 
+
+.dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dd-menu li:hover {
+  background-color: #43c3bf;
+}
+
+.dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+
+.dd-menu li.divider{
+  padding: 0;
+  border-bottom: 1px solid #2c44bc;
+}
+
+
 label{
   /* display: flex; */
   /* flex-direction: row; */
@@ -58,6 +157,13 @@ input{
   border-radius: 5%;
   
 }
+
+.email{
+  width: 15rem;
+  height: 2rem;
+}
+
+
 
 textarea{
   width: 30rem;
